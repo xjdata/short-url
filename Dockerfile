@@ -14,5 +14,6 @@ RUN apk add --no-cache ca-certificates
 WORKDIR /go
 COPY main /go
 RUN mkdir data
+EXPOSE 8080
 
 ENTRYPOINT ./main -d=$DEFAULT_DB_NAME -s=$DEFAULT_SCHEMA -dn=$DEFAULT_DOMAIN_NAME
